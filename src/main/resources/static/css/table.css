@@ -1,0 +1,46 @@
+body {
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+    background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJ4AqAMBIgACEQEDEQH/xAAZAAEBAQEBAQAAAAAAAAAAAAADAgABBAb/xAAZEAEBAQEBAQAAAAAAAAAAAAAAAQIRAxL/xAAZAQEAAwEBAAAAAAAAAAAAAAACAAEDBQT/xAAYEQEBAQEBAAAAAAAAAAAAAAAAARECEv/aAAwDAQACEQMRAD8A+wi4iLy2dukyTI8kyNCkhIOEyFZ0kXEZXAoUkXBxcEKSLg4SCNVFRMVBGuxSVILsdjjIjMzIpmZkF8fCZFkmXudelhMihcjWdJCZHCZCs6vJIPJIFCryuIi8iNXFxEXFUKuKicqgi6qJVFC6zMiMzNUUzMyC+OlJkOTZe+uvS5JgeSZCs6SVeRwkGs6TK4PK4A0kJkcXkQpMqyiLyNCryuIioIqVERcULrM6pHGZxBdZqyC+MyXIsmy6NdmkyTIoXIVlSReRxcGhSZJBZJAoUmVwcXBoUsVkeVwaNJFxEXAoKVExShdjrkdUpq5Ha4g1xmZFPjYXI4vLpV2aXJMjyuBWdJCQeVwQpMrg4vI2BSSrgoTIUKWKiJVwaFJCQWSZCjVxURFwaDsdcdFTVx2uVBrjMyC+Oi4iLy6jtUkVlEUIUspILK5RsCkzSSihINgUkq8ji5QsClyuChMhQpITIskgUKSLiIvIUa6pyOjRcrldrlQa4zMgvjorKVR1sdqri4OLg4JIuDlXBsCkzVyjlXKNgUkXkcXBsCllJmilXAsClyWBzSZZ2BSxcHlcZ0KSOuRQUU1xSVDXGZli+OdlS7HYx2iRUHFxWDVxeaiKlHBpJVyjlVKNgUspJQyrlGxnTZpIHNXmhYFPkmaHNLhlYNNFwUJGdCljqYtlQcrlUmiNSzVlg+Njsc6ztu4uKg1RWDSSqg5VdTGdJKuUUrsqsZ2mzVyglJNDYztPKvNefOi50zvIWvRmmxXmzS5rLrkdenNJmgzTZY9RVNlY8kjGhWcrrlAais1ZYPjHUs72O4t2VHW6mBaTrvR9aaTGVpetKP6b6TGdp5pU0CaVND5ZWvTnS86eWaJnQ3lna9edGxXizs+NMuuR17cU/nXi89PT56efvlNezJIDzpsvN1Eqk1TlZDR1m0ywf//Z);
+    background-position: center;
+    background-size: cover;
+}
+
+.description {
+    display: grid;
+    justify-content: center;
+}
+
+th {
+    padding: 10px 50px;
+    border: 1px solid #000000;
+    background: mediumpurple;
+}
+
+td {
+    padding: 10px 50px;
+    border: 1px solid #000000;
+    background: #d5b1ee;
+}
+
+.table {
+    margin: 10px auto;
+    width: 90vw;
+    border: 1px solid #000000;
+    border-collapse: collapse;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.home-button button {
+    display: flex;
+    align-self: start;
+    margin: 10px;
+    padding: 7px;
+    border-radius: 500px;
+}
+
+.home-button img {
+    max-height: 30px;
+}
