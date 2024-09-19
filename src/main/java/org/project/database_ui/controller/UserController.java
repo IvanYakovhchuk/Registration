@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -48,11 +49,18 @@ public class UserController {
                 .orElse(null);
     }
 
-    @GetMapping("/userByUsername/{username}")
-    public Object getUsersByUsername(@PathVariable("username") String username) {
-        return userRepository.findByUsername(username).size() == 1 ?
-                userRepository.findByUsername(username).getFirst() :
-                userRepository.findByUsername(username);
+    @GetMapping("/get")
+    public String getUsers(Model model) {
+        return "users_get";
+    }
+    @GetMapping("/getUsers")
+    public String getUsersByUsername(@RequestParam("username") String username, Model model) {
+        List<Person> users = userRepository.findByUsername(username);
+        if (users.isEmpty()) {
+            return "users_not_found";
+        }
+        model.addAttribute("users", users);
+        return "users";
     }
 
     @PutMapping("/user/{id}")
@@ -68,9 +76,7 @@ public class UserController {
 
     @PostMapping("/delete")
     public String deleteUsers(@ModelAttribute("selectedUsers") List<Long> selectedUsersIds) {
-        if (!selectedUsersIds.isEmpty()) {
-            userRepository.deleteAllById(selectedUsersIds);
-        }
+        userRepository.deleteAllById(selectedUsersIds);
         return "redirect:/users";
     }
 }
