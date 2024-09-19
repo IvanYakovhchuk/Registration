@@ -21,7 +21,7 @@ table {
     margin-bottom: 50px;
 }
 
-thead th, tbody th {
+th {
     padding: 10px 50px;
     border: 1px solid #000000;
     background: mediumpurple;
@@ -33,7 +33,20 @@ td {
     background: #d5b1ee;
 }
 
-.home-button button {
+.delete-button {
+    background: blue;
+    color: aliceblue;
+    padding: 15px;
+    border: 2px solid lightgray;
+    border-radius: 25px;
+    width: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-button {
     display: flex;
     align-self: start;
     margin: 10px;

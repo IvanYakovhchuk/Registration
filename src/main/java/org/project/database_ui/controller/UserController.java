@@ -60,13 +60,17 @@ public class UserController {
         userRepository.updateUserById(person, id);
     }
 
-    @DeleteMapping("/userById/{id}")
-    public void deleteUserById(@PathVariable("id") long id) {
-        userRepository.deleteById(id);
+    @GetMapping("/delete")
+    public String deleteUsers(Model model) {
+        model.addAttribute("users", userRepository.findAll());
+        return "users_delete";
     }
 
-    @DeleteMapping("/userByUsername/{username}")
-    public void deleteUserByUsername(@PathVariable("username") String username) {
-        userRepository.deleteByUsername(username);
+    @PostMapping("/delete")
+    public String deleteUsers(@ModelAttribute("selectedUsers") List<Long> selectedUsersIds) {
+        if (!selectedUsersIds.isEmpty()) {
+            userRepository.deleteAllById(selectedUsersIds);
+        }
+        return "redirect:/users";
     }
 }
